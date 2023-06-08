@@ -34,14 +34,17 @@ opts <- opts |>
 
 
 opts$default[opts$default == "NULL"] <- NA
-default <- opts |>
-  select(name, default, hdtype, condition)
+opts2 <- opts |>
+  select(name, default, hdtype, condition, category) |>
+  arrange(name)
+options <- opts2
+
 
 ## Todo
 # Install fonts locally if not available. Define hdtype vectors
 
-l <- transpose(default)
-l <- map(l, function(op){
+l <- transpose(opts2)
+default <- map(l, function(op){
   #op <- l[[1]]
   hdtype <- op$hdtype
   opt <- list()
@@ -49,27 +52,28 @@ l <- map(l, function(op){
   opt$default <- hdtype::as_basetype(default)
   opt$condition <- op$condition
   opt
-
-}) |> set_names(default$name)
+}) |> set_names(opts2$name)
 
 
 
 # Opt categories
-categories <- opts |>
+cats_df <- opts |>
   select(category, name) |>
   unnest(category) |>
   arrange(category)
 
-cats <- categories |>
+cats <- cats_df |>
   group_split(category) |>
   map(~.$name)
 
-cats_keys <- categories |>
+cats_keys <- cats_df |>
   group_by(category) |>
   group_keys() |>
   pull(category)
-cats <- cats |> set_names(cats_keys)
+categories <- cats |> set_names(cats_keys)
+
+usethis::use_data(default, categories, options,
+                  overwrite = TRUE, internal = FALSE)
 
 
 
-usethis::use_data(DATASET, overwrite = TRUE)
