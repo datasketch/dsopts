@@ -45,7 +45,7 @@ options <- opts2
 
 l <- transpose(opts2)
 default <- map(l, function(op){
-  #op <- l[[1]]
+  #op <- l[[46]]
   hdtype <- op$hdtype
   opt <- list()
   default <- do.call(hdtype, list(op$default))
