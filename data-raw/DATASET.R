@@ -23,7 +23,8 @@ if(any(is.na(opts$default))) stop("NAs found in default")
 
 
 hdtypes <- unique(opts$hdtype)
-standard_hdtypes <- c("Cat", "Num", "Txt", "Chk", "Img", "Seq")
+standard_hdtypes <- c("Cat", "Num", "Txt", "Chk", "Img", "Seq",
+                      "Lst[Clr]")
 
 non_standard_hdtypes <- hdtypes[!hdtypes %in% standard_hdtypes]
 non_standard_hdtypes
@@ -43,10 +44,19 @@ options <- opts2
 ## Todo
 # Install fonts locally if not available. Define hdtype vectors
 
+lst_clr <- function(dflt){
+  # op <- l[[52]]
+  # dflt <- op$default
+  str_split(dflt, ", ")[[1]]
+}
+
+
 l <- transpose(opts2)
 default <- map(l, function(op){
-  #op <- l[[46]]
+  #op <- l[[52]]
   hdtype <- op$hdtype
+  if(hdtype == "Lst[Clr]")
+    hdtype <- "lst_clr"
   opt <- list()
   default <- do.call(hdtype, list(op$default))
   opt$default <- hdtype::as_basetype(default)
