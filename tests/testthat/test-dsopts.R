@@ -1,8 +1,5 @@
 test_that("Options", {
 
-
-
-
   expect_equal(length(dsopts_available()), nrow(dsopts::options))
 
   expect_equal(dsopts_available("map"), names(dsopts_default("map")))
@@ -48,6 +45,13 @@ test_that("Merge", {
   expect_equal(myfun_opts$agg,"MyAgg")
 
 
+
+  o1 <- list(tooltip_template = "TPL")
+  o2 <- dsopts_merge(opts = o1)
+  expect_equal(o2$tooltip_template, o1$tooltip_template)
+
+
+
 })
 
 
@@ -62,6 +66,12 @@ test_that("Filter options", {
   all_opt_cat <- dsopts_filter_categories(categories, type = "all_of")
   any_opt_cat <- dsopts_filter_categories(categories, type = "any_of")
   expect_true(length(all_opt_cat) < length(any_opt_cat))
+
+
+
+  # dsopts_data()
+  # dsopts_legend()
+  # dsopts_maps()
 
 
 })

@@ -32,10 +32,18 @@ dsopts_merge <- function(..., categories = NULL){
     }
   }
   opts_list <- args$opts
-  # str(opts_list)
+
+  str(opts_list$tooltip_template)
+
   args$opts <- NULL
   defaults <- dsopts_default(categories = categories)
+
+  str(defaults$tooltip_template)
+
   args_opts <- modifyList(args, opts_list %||% list(), keep.null = TRUE)
+
+  str(args_opts$tooltip_template)
+
   opts <- modifyList(defaults, args_opts, keep.null = TRUE)
   opts
 }
