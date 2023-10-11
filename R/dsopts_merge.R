@@ -21,7 +21,7 @@
 #' }
 dsopts_merge <- function(..., categories = NULL){
   args <- list(...)
-  # str(args)
+  str(args)
   if(length(args) > 0){
     nms_opts <- c(names(args)[names(args) != "opts"],
                   names(args$opts))
@@ -33,8 +33,6 @@ dsopts_merge <- function(..., categories = NULL){
   }
   opts_list <- args$opts
 
-  str(opts_list$tooltip_template)
-
   args$opts <- NULL
   defaults <- dsopts_default(categories = categories)
 
@@ -45,7 +43,12 @@ dsopts_merge <- function(..., categories = NULL){
   str(args_opts$tooltip_template)
 
   opts <- modifyList(defaults, args_opts, keep.null = TRUE)
-  opts
+
+  # Convert NAs to NULL in merge
+  lapply(opts, function(x){
+    if(all(is.na(x))) return(NULL)
+    x
+  })
 }
 
 

@@ -51,7 +51,7 @@ lst_clr <- function(dflt){
 }
 
 
-l <- transpose(opts2)
+l <- transpose(options)
 default <- map(l, function(op){
   #op <- l[[52]]
   hdtype <- op$hdtype
@@ -62,7 +62,7 @@ default <- map(l, function(op){
   opt$default <- hdtype::as_basetype(default)
   opt$condition <- op$condition
   opt
-}) |> set_names(opts2$name)
+}) |> set_names(options$name)
 
 
 
@@ -81,6 +81,9 @@ cats_keys <- cats_df |>
   group_keys() |>
   pull(category)
 categories <- cats |> set_names(cats_keys)
+
+
+
 
 usethis::use_data(default, categories, options,
                   overwrite = TRUE, internal = FALSE)

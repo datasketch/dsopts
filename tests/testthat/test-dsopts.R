@@ -21,6 +21,27 @@ test_that("Options", {
 test_that("Merge", {
 
 
+  ###
+
+  opts_custom <- dsopts_merge(agg = "SUMA", sort = NA, categories = "dataprep")
+  expect_null(opts_custom$sort)
+
+  expect_equal(opts_custom$agg, "SUMA")
+
+  opts <- list(
+    agg = "SUMA",
+    sort = NA
+  )
+  opts_custom <- dsopts_merge(opts = opts, categories = "dataprep")
+  expect_equal(opts_custom$agg, "SUMA")
+  expect_null(opts_custom$sort)
+
+
+
+
+
+  ###
+
   dsopts_merge(opacity = 0, categories = "map")
 
   m1 <- dsopts_merge(opacity = 0)
@@ -49,6 +70,17 @@ test_that("Merge", {
   o1 <- list(tooltip_template = "TPL")
   o2 <- dsopts_merge(opts = o1)
   expect_equal(o2$tooltip_template, o1$tooltip_template)
+
+
+  ## Merge with fun and categories
+
+  myfun_map <- function(x, ...){
+    opts <- dsopts_merge(..., categories = "map")
+    opts
+  }
+
+  opts_map <- myfun_map(background_color = 0)
+  expect_equal(opts_map$background_color, 0)
 
 
 
