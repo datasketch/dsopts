@@ -29,8 +29,14 @@ dsopts_default <- function(categories = NULL, type = "all_of"){
     opts <- opts[opt_names]
     nms <- names(opts)
   }
-  purrr::map(opts, ~.$default) |>
+  opts <- purrr::map(opts, ~.$default) |>
     purrr::set_names(nms)
+
+  # NAs to NULL
+  lapply(opts, function(x){
+    if(all(is.na(x))) return(NULL)
+    x
+  })
 }
 
 
