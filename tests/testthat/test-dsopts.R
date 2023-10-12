@@ -7,8 +7,11 @@ test_that("Options", {
   expect_equal(length(dsopts::options$name),
               length(unique(dsopts::options$name)))
 
-  categories <- c("map","bubble")
-  dsopts_default(categories = categories)
+  categories <- c("dataprep")
+  opts <- dsopts_default(categories = categories)
+
+  expect_true(all(purrr::map_lgl(dstools::removeNulls(opts), ~ !is.na(.))))
+
 
   category <- "map"
   dsopts_default("map")
