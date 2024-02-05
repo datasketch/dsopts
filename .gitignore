@@ -34,3 +34,4 @@ tests/testthat/tmp/*
 .DS_Store
 .Renviron
 
+R/temp.R

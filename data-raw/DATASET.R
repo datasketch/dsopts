@@ -36,7 +36,7 @@ opts <- opts |>
 
 opts$default[opts$default == "NULL"] <- NA
 opts2 <- opts |>
-  select(name, default, hdtype, condition, category) |>
+  select(name, default, hdtype, category) |>
   arrange(name)
 options <- opts2
 
@@ -60,7 +60,7 @@ default <- map(l, function(op){
   opt <- list()
   default <- do.call(hdtype, list(op$default))
   opt$default <- hdtype::as_basetype(default)
-  opt$condition <- op$condition
+  #opt$condition <- op$condition
   opt
 }) |> set_names(options$name)
 
