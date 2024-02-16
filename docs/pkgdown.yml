@@ -3,5 +3,6 @@ pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
   argui: argui.html
-last_built: 2024-02-15T20:25Z
+  indexcat: indexcat.html
+last_built: 2024-02-16T22:25Z
 

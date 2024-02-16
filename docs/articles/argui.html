@@ -38,8 +38,8 @@
 <li class="nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
-<li class="active nav-item">
-  <a class="nav-link" href="../articles/argui.html">Articulos de Interes</a>
+<li class="nav-item">
+  <a class="nav-link" href="../articles/indexcat.html">Categorías</a>
 </li>
       </ul>
 <form class="form-inline my-2 my-lg-0" role="search">
@@ -59,10 +59,7 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="" class="logo" alt=""><h1>dataprep options</h1>
-                        <h4 data-toc-skip class="author">Nicolas Sanchez
-Benito</h4>
             
-            <h4 data-toc-skip class="date">2024-02-15</h4>
       
       
       <div class="d-none name"><code>argui.Rmd</code></div>
@@ -73,148 +70,176 @@ Benito</h4>
 <p>This document aims to explain the options available in the dataprep
 category. It will discuss the purpose of each argument, the possible
 values it can take, and the expected outcome of each argument.</p>
-<div class="section level4">
-<h4 id="agg">agg :<a class="anchor" aria-label="anchor" href="#agg"></a>
-</h4>
-<p>El argumento <code>agg</code> se refiere a “agregación”, es decir,
-cómo los datos se sumarizan o combinan como sumas, promedios, máximos o
-mínimos. Es necesario especificar con el nombre de las funciones (mean,
-max, min, etc). Se encuentra únicamente en la categoría “dataprep” y por
-defecto tiene el valor sum. Además, es de tipo Cat (categórico) y los
-posibles valores de este argumento son: sum Cat, mean Cat, max Cat, min
-Cat, std Cat o growth Cat.</p>
-</div>
-<div class="section level4">
-<h4 id="agg_na_rm">agg_na_rm :<a class="anchor" aria-label="anchor" href="#agg_na_rm"></a>
-</h4>
-<p>El argumento <code>agg_na_rm</code> indica si los valores no
-disponible (NA) deben ser removidos antes de agregar datos. Su valor por
-defecto es TRUE, es de tipo Chk (Check) y los posibles valores de este
-es True o False.</p>
-</div>
-<div class="section level4">
-<h4 id="agg_text">agg_text :<a class="anchor" aria-label="anchor" href="#agg_text"></a>
-</h4>
-<p>El argumento <code>agg_text</code> es una etiqueta que se coloca en
-el nombre de la columna en donde se realiza alguna agregación
-específica. Se encuentra tambien en la categoría text, su valor por
-defecto es NULL y este es de tipo Txt(Texto). Algunos de los posibles
-valores que puede tomar son: sum VAR, mean VAR, max VAR</p>
-</div>
-<div class="section level4">
-<h4 id="drop_na">drop_na :<a class="anchor" aria-label="anchor" href="#drop_na"></a>
-</h4>
-<p>El argumento <code>drop_na</code> excluye datos faltantes(NA) de una
-visualización en caso de que sea TRUE. Por defecto, su valor es FALSE.
-Hace parte del hdtype Chk (Check) y los posibles valores que puede tomar
-son TRUE or FALSE</p>
-</div>
-<div class="section level4">
-<h4 id="drop_na_var2">drop_na_var2 :<a class="anchor" aria-label="anchor" href="#drop_na_var2"></a>
-</h4>
-<p>El argumento <code>drop_na_var2</code> elimina los datos faltantes
-(NA) de una segunda variable en la visualización. Su valor por default
-es FALSE, su hdtype es Chk (Check) y sus posibles valores es TRUE o
-FALSE</p>
-</div>
-<div class="section level4">
-<h4 id="format_number_prefix">format_number_prefix :<a class="anchor" aria-label="anchor" href="#format_number_prefix"></a>
-</h4>
-<p>El argumento <code>format_number_prefix</code> brinda una forma de
-usar los prefijos del Sistema Internacional de Unidades (SI) tales como
-k (Miles), M (Millones) en los valores numéricos. Su valor
-predeterminado es FALSE y su hdtype es chk (Check)</p>
-</div>
-<div class="section level4">
-<h4 id="format_sample_cat">format_sample_cat :<a class="anchor" aria-label="anchor" href="#format_sample_cat"></a>
-</h4>
-<p>El argumento <code>format_sample_cat</code> formato datos categoricos
-(mayuscula, minuscula, etc). su hdtype es Txt(texto. se encuentra en
-theme, format, dataclean</p>
-</div>
-<div class="section level4">
-<h4 id="format_sample_dat">format_sample_dat :<a class="anchor" aria-label="anchor" href="#format_sample_dat"></a>
-</h4>
-<p>El argumento <code>format_sample_dat</code> formato para datos de
-tipo fecha. categoría theme, format, dataprep. es hdtype Txt (texto)</p>
-</div>
-<div class="section level4">
-<h4 id="format_sample_num">format_sample_num :<a class="anchor" aria-label="anchor" href="#format_sample_num"></a>
-</h4>
-<p>El argumento <code>format_sample_num</code> formato de los números de
-la viz, si no se especifica formato por ejes, todos quedan con el
-formato especificado en este argumento. tambien en theme, format. valor
-por defecto es 1500 y su hdtype es Txt(texto)</p>
-</div>
-<div class="section level4">
-<h4 id="na_label">na_label :<a class="anchor" aria-label="anchor" href="#na_label"></a>
-</h4>
-<p>El argumento <code>na_label</code> etiqueta para reemplazar NA.
-tambien en text. su hdtype Txt(texto)</p>
-</div>
-<div class="section level4">
-<h4 id="percentage">percentage :<a class="anchor" aria-label="anchor" href="#percentage"></a>
-</h4>
-<p>El argumento <code>percentage</code> Si TRUE, se calcula el
-porcentaje por la variable numerica indicada. Se encuentra tambien en
-bar y pie. valor por defecto FALSE, su tipo hdtype es chk(check)</p>
-</div>
-<div class="section level4">
-<h4 id="percentage_col">percentage_col :<a class="anchor" aria-label="anchor" href="#percentage_col"></a>
-</h4>
-<p>El argumento <code>percentage_col</code> nombre/s de variable
-categorica por la cual se desea el porcentaje (solo se activa si
-percentage es TRUE), default Null, txt (texto)</p>
-</div>
-<div class="section level4">
-<h4 id="percentage_intra">percentage_intra :<a class="anchor" aria-label="anchor" href="#percentage_intra"></a>
-</h4>
-<p>El argumento <code>percentage_intra</code> cálculo de porcentajes
-dentro de categorías individuales o grupos en una visualización por
-defecto FALSE, su hdtype es Chk</p>
-</div>
-<div class="section level4">
-<h4 id="percentage_name">percentage_name :<a class="anchor" aria-label="anchor" href="#percentage_name"></a>
-</h4>
-<p>El argumento <code>percentage_name</code> nombre personalizado de la
-columna si percentage es TRUE, su hdtype es Txt(texto)</p>
-</div>
-<div class="section level4">
-<h4 id="tooltip_agg_collapse_rows_template">tooltip_agg_collapse_rows_template :<a class="anchor" aria-label="anchor" href="#tooltip_agg_collapse_rows_template"></a>
-</h4>
-<p>El argumento <code>tooltip_agg_collapse_rows_template</code>
-agregación de datos en los tooltips, controla si filas similares o
-relacionadas se colapsan en una única entrada en el tooltip para evitar
-la repetición. Se usa para recibir un dataframe y un template, y retorna
-una columna de strings con el template aplicado, el template puede
-aplicar diferentes agregaciones como mean, o max. Ejemplo:
-“{mean(speed)} k/h con otra variable que es {max(cyl)} cilindros”. Se
-encuentra en tooltip, su hdtype es Cat. sus posibles valores son one of
-funs: sum, mean, etc</p>
-</div>
-<div class="section level4">
-<h4 id="tooltip_include_all_vars">tooltip_include_all_vars :<a class="anchor" aria-label="anchor" href="#tooltip_include_all_vars"></a>
-</h4>
-<p>El argumento <code>tooltip_include_all_vars</code> incluye todas las
-variables disponibles en el datafrema ingresado para realizar una
-visualización. esta tambien en tooltip, por defecto es FALSE, su hdtype
-es Chk(Check)</p>
-</div>
-<div class="section level4">
-<h4 id="tooltip_sep_all_vars">tooltip_sep_all_vars :<a class="anchor" aria-label="anchor" href="#tooltip_sep_all_vars"></a>
-</h4>
-<p>El argumento <code>tooltip_sep_all_vars</code> separador utilizado en
-los tooltips cuando se incluyen múltiples variables. Tambien en tooltip,
-su hdtype es Cat</p>
-</div>
-<div class="section level4">
-<h4 id="tooltip_template">tooltip_template :<a class="anchor" aria-label="anchor" href="#tooltip_template"></a>
-</h4>
-<p>El argumento <code>tooltip_template</code> plantilla de
-personalizacion de tooltips, tambien en tooltip, su hdtype es Txt,
-valores posibles Txt tpl_vars in names(df)</p>
-</div>
-  </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
+<ul>
+<li>
+<h4 id="agg">agg</h4>
+<p>The <code>agg</code> argument (which refers to aggregation)
+determines how data is summarized or combined, such as sums, averages,
+maximums, minimums, etc. It expects a value of type
+<code>character</code> and must be specified with the names of the
+corresponding functions (mean, max, min, etc.). By default, its value is
+“sum.” Additionally, its hd_type is Categorical (Cat) and can take the
+following values: “sum Cat,” “mean Cat,” “max Cat,” “min Cat,” “std
+Cat,” or “growth Cat.”</p>
+</li>
+<li>
+<h4 id="agg_na_rm">agg_na_rm</h4>
+<p>The <code>agg_na_rm</code> argument indicates whether missing values
+(NA) should be removed before aggregating data. It expects a value of
+type logical, which represents boolean values (with possible values
+being True or False). By default, its value is TRUE, and its hd_type is
+Check (Chk).</p>
+</li>
+<li>
+<h4 id="agg_text">agg_text</h4>
+<p>The <code>agg_text</code> argument is used as a label in the column
+name where a specific aggregation is performed. This argument is also
+located in the “text” category. Its default value is NULL, and its
+hd_type is Txt (Text). Some of the possible values it can take are: ‘sum
+VAR,’ ‘mean VAR,’ ‘max VAR.’ This argument should be used to specify the
+type of aggregation performed on the data in the column. For example, it
+can be used to indicate that the data has been summed, averaged, or that
+the maximum value has been taken.</p>
+</li>
+<li>
+<h4 id="drop_na">drop_na</h4>
+<p>The <code>drop_na</code> argument serves to exclude missing data (NA)
+from a visualization if set to TRUE. Its purpose is to enhance the
+clarity of the visual representation by removing any missing values and
+its hdtype is Chk (Check).This expects a logical value (TRUE or FALSE)
+and by default, its value is FALSE.</p>
+</li>
+<li>
+<h4 id="drop_na_var2">drop_na_var2</h4>
+<p>The <code>drop_na_var2</code> argument removes missing data (NA) from
+a second variable in the visualization. Its default value is FALSE, its
+<code>hdtype</code> is Chk (Check), and its possible values are TRUE or
+FALSE.</p>
+</li>
+<li>
+<h4 id="format_number_prefix">format_number_prefix</h4>
+<p>The format_number_prefix argument formats numeric values using SI
+prefixes to represent large numbers in a more readable format such as k
+(thousands), M (millions) in numeric values.This argument expects a
+logical value (TRUE or FALSE), its default value is FALSE and its hdtype
+is chk (Check). If is TRUE enables the formatting feature, while if is
+FALSE retains the original numeric values without SI prefixes.</p>
+</li>
+<li>
+<h4 id="format_sample_cat">format_sample_cat</h4>
+<p>The <code>format_sample_cat</code>argument allows specifying how
+categorical data should be formatted, such as whether to convert them to
+uppercase, lowercase, etc. Its <code>hdtype</code> is Txt (text) and it
+is found in the theme, format, and dataclean categories. Its default
+value is NULL, which means no default formatting is applied.</p>
+</li>
+<li>
+<h4 id="format_sample_dat">format_sample_dat</h4>
+<p>The <code>format_sample_dat</code> argument is used to format
+date-type data and allows to specify how date-type data should be
+formatted (for example YYYY-MM-DD or DD/MM/YYYY). It is also found in
+the theme and format categories, and its hdtype is Txt (text). The
+default value is NULL, indicating that no specific formatting is applied
+by default.</p>
+</li>
+<li>
+<h4 id="format_sample_num">format_sample_num</h4>
+<p>The <code>format_sample_num</code> argument is used to set the format
+for numbers in the visualization. If no format is specified for axes,
+all numbers will use the format specified by this argument. The default
+value is 1500(Review) and is also found in the theme and format
+categories. This argument expects a <code>character</code> type
+(Review).</p>
+</li>
+<li>
+<h4 id="na_label">na_label</h4>
+<p>The <code>na_label</code> argument serves to provide a way to label
+NA values with a specific text string, improving the readability and
+understanding of the data. For example, if a dataset contains NA values
+in a column representing “Income,” using
+<code>na_label = "Not Available"</code> would display “Not Available”
+instead of NA in the visual representation of the data. It is also found
+in the text category and its <code>hdtype</code> is Txt (text). This
+argument expects a <code>character</code> type value and can take any
+text string to be used as a replacement label for NA values.</p>
+</li>
+<li>
+<h4 id="percentage">percentage</h4>
+<p>The <code>percentage</code> argument, when set to TRUE, calculates
+the percentage for the indicated numerical variable. It is also found in
+the bar and pie categories. Its default value is FALSE, and its
+<code>hdtype</code> is chk (check). This argument expects a logical
+value (TRUE or FALSE) and is used to determine whether percentages
+should be calculated and displayed alongside the numerical variable in
+the visualization.</p>
+</li>
+<li>
+<h4 id="percentage_col">percentage_col</h4>
+<p>The <code>percentage_col</code> argument specifies the name or names
+of the categorical variable(s) for which you want to calculate
+percentages.For example, if you have a dataset with columns “category”
+and “value” representing different categories and their corresponding
+values, you can use percentage_col = “category” to calculate the
+percentage of each category. Its default value is NULL, and its
+<code>hdtype</code> is Txt (text).</p>
+</li>
+<li>
+<h4 id="percentage_intra">percentage_intra</h4>
+<p>The <code>percentage_intra</code> argument calculates percentages
+within individual categories or groups in a visualization. Its default
+value is FALSE, and its <code>hdtype</code> is Chk (Check). This
+argument expects a logical value (TRUE or FALSE) and is used to
+determine whether percentages should be calculated within each category
+or group.</p>
+</li>
+<li>
+<h4 id="percentage_name">percentage_name</h4>
+<p>The <code>percentage_name</code> argument specifies a character value
+that will be used as the name for the column containing the calculated
+percentages. It is used to provide a more descriptive name for the
+percentage column in the output visualization or dataset if
+<code>percentage</code> is TRUE. Its <code>hdtype</code> is Txt (text)
+and the type of the input is character (text).</p>
+</li>
+<li>
+<h4 id="tooltip_agg_collapse_rows_template">tooltip_agg_collapse_rows_template</h4>
+<p>The <code>tooltip_agg_collapse_rows_template</code> argument controls
+the aggregation of data in tooltips, determining whether similar or
+related rows are collapsed into a single entry in the tooltip to avoid
+repetition. It takes a dataframe and a template as inputs and returns a
+column of strings with the applied template. The template can apply
+different aggregations such as mean or max. This argument is found in
+the tooltip category, and its <code>hdtype</code> is Cat (categorical).
+Its possible values are functions such as sum, mean, etc., which are
+used to specify the type of aggregation to be applied in the
+tooltip.</p>
+</li>
+<li>
+<h4 id="tooltip_include_all_vars">tooltip_include_all_vars</h4>
+<p>The <code>tooltip_include_all_vars</code> argument includes all
+available variables in the entered dataframe for visualization. It is
+also found in the tooltip category, with a default value of FALSE. Its
+<code>hdtype</code> is Chk (Check).</p>
+</li>
+<li>
+<h4 id="tooltip_sep_all_vars">tooltip_sep_all_vars</h4>
+<p>The <code>tooltip_sep_all_vars</code> argument specifies the
+separator used in tooltips when multiple variables are included,
+allowing for clear separation and organization of information.. It is
+also found in the tooltip category, and its <code>hdtype</code> is Cat
+(categorical).</p>
+</li>
+<li>
+<h4 id="tooltip_template">tooltip_template</h4>
+<p>The tooltip_template argument is used as a customization template for
+tooltips, also located in the tooltip category. This template allows you
+to customize the content and format of tooltips in a visualization,
+using specific variables from the dataframe to display detailed and
+relevant information when hovering over elements of the
+visualization.Its hdtype is Txt (text), and the possible values are text
+that match the names of variables in the dataframe.</p>
+</li>
+</ul></main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>
 </div>
 

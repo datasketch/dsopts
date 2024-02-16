@@ -1,0 +1,23 @@
+---
+title: "All categories"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+This section provides an overview of all the categories in which specific arguments are classified.
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+* [dataprep](file:///C:/Users/edda/Documents/Nicolas_Datasktch/dsopts/docs/articles/argui.html)
+
+
