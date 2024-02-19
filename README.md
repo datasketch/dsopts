@@ -11,7 +11,7 @@ data visualization and processing packages
 
 ## Installation
 
-You can install the development version of dsopts from
+You cannot install the development version of dsopts from
 [GitHub](https://github.com/) with:
 
 ``` r
