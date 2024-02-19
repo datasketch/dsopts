@@ -63,5 +63,6 @@ knitr::opts_chunk$set(
 
 
 * [dataprep](dataprep_options.html)
+* [colorprep](colorsprep_options.html)
 
 
