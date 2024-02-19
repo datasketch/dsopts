@@ -7,10 +7,10 @@ template:
 
 navbar:
   structure:
-    left:  [reference, Categorías]
+    left:  [reference, Categories]
   components:
-    Categorías:
-      text: Categorías
+    Categories:
+      text: Categories
       href: articles/indexcat.html
 
 
