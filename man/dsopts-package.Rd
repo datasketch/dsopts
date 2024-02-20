@@ -4,12 +4,12 @@
 \name{dsopts-package}
 \alias{dsopts}
 \alias{dsopts-package}
-\title{dsopts: What the Package Does (One Line, Title Case)}
+\title{dsopts: dsopts}
 \description{
 What the package does (one paragraph).
 }
 \author{
-\strong{Maintainer}: First Last \email{first.last@example.com} (\href{https://orcid.org/YOUR-ORCID-ID}{ORCID})
+\strong{Maintainer}: Camila Achuri \email{first.last@example.com} (\href{https://orcid.org/YOUR-ORCID-ID}{ORCID})
 
 }
 \keyword{internal}
