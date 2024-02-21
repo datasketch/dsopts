@@ -1,0 +1,140 @@
+---
+title: "titles options"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{titles options}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+<style>
+  body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+  }
+  h1, h2, h3 {
+    color: #007bff;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  table, th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+  }
+  th {
+    background-color: #007bff;
+    color: white;
+  }
+  .section-title {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  /* Estilos de la barra de desplazamiento */
+  body::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f8f9fa;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #007bff;
+  }
+
+  body::-webkit-scrollbar-thumb:hover {
+    background-color: #0056b3;
+  }
+
+</style>
+
+This page aims to explain the options available in the colorprep category. It will discuss the purpose of each argument, the possible values it can take, and the expected outcome of each argument.
+
+#### caption
+
+Provide a descriptive or explanatory text that accompanies a visualization, providing additional context such as the data source. It expects a value of type character (hdtype Txt).
+
+#### caption_align
+
+Controls the alignment of the credits in the visualization. The default alignment is "left" and it expects a value of type character (hdtype Cat).
+
+#### caption_color
+
+Controls the color of the text for the credits in the visualization. The default color is #28333f and it expects a value of type character (hdtype Clr).
+
+#### caption_link
+
+Specify a link associated with the credits of the graph. It accepts values of type character (hdtype Txt), where a valid URL can be provided as a string. The default value is NULL.
+
+#### caption_margin
+
+Specifies the margin around the credits of the visualization. The default value is 15 and its it expects a value of type numeric (hdtype Num).
+
+#### caption_size  
+
+Specifies the font size, in points, of the text in the credits of the visualization. The default value is 12 and it expects a value of type numeric (hdtype Num).
+
+#### caption_weight
+
+Specifies the font weight used for the credits in a visualization. A higher weight corresponds to a bolder text. The default value is NULL and it expects a value of type character (hdtype Cat).
+
+#### subtitle
+
+Defines secondary text that offers additional information or context about the visualization, typically positioned below the main title and it expects a value of type character (hdtype Txt).
+
+#### subtitle_align
+
+Determines the alignment of the subtitle in the visualization. The default alignment is left and its type is character (hdtype Cat), meaning it accepts values such as "left", "center", or "right".
+
+#### subtitle_color
+
+Defines the color of the subtitle text in the visualization. You can specify the color using any valid format. The default color is #28333f and its type is character (hdtype Clr).
+
+#### subtitle_size
+
+Specifies the font size, in points, of the subtitle text in the visualization. The default size is 17 points and it expects a value of type numeric (hdtype Num).
+
+#### subtitle_weight
+
+Specifies the font weight of the subtitle text in the visualization.The default weight is 700, and its type is character (hdtype Cat).
+
+#### title
+
+Defines the main title of the visualization, it accepts characters values(hdtype Txt).
+
+#### title_align
+
+Controls the alignment of the title within the visualization. By default, the title is aligned to the left, but you can adjust it to be centered or aligned to the right. it expects a value of type numeric (hdtype Cat).
+
+#### title_axis_color
+
+Specifies the color of the text used for the axis titles in a chart. This helps distinguish the axis titles from other text in the visualization. The default value is NULL, indicating that the color is not explicitly set. Its type is character (hdtype Clr).
+
+#### title_axis_size
+
+Defines the font size for the axis titles in a graphic. The default size is 13 points, and you can specify values from 1 to 20 points. Its type is numeric (hdtype Num).
+
+#### title_color
+
+Specifies the color of the text used for the main title in a visualization. The default color is #28333f and it expects a value of type character(hdtype Clr).
+
+#### title_family
+
+Specifies the font family used for the main title in a visualization. The default font family is IBM Plex Sans and it expects a value of type character(hdtype Fnt).
+
+#### title_legend
+
+Defines the title for the legend in the visualization. The legend helps viewers to identify the meaning of each color, shape, or symbol used in the chart. Its type is character (hdtype Txt).
+
+#### title_size
+
+Determines the font size of the visualization's title. The default size is 21 points but you can adjust this value from 1 to 20 points. It expects a value of type numeric (hdtype Num).
+
+#### title_weight
+
+Specifies the font weight of the visualization's title. The default weight is 700 (bold style), but you can choose between several options such as thin, light, regular, medium, bold, and black. It expects a value of type character (hdtype Cat).

@@ -1,0 +1,122 @@
+---
+title: "axis options"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{axis options}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+<style>
+  body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+  }
+  h1, h2, h3 {
+    color: #007bff;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  table, th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+  }
+  th {
+    background-color: #007bff;
+    color: white;
+  }
+  .section-title {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  /* Estilos de la barra de desplazamiento */
+  body::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f8f9fa;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #007bff;
+  }
+
+  body::-webkit-scrollbar-thumb:hover {
+    background-color: #0056b3;
+  }
+</style>
+
+This page aims to explain the options available in the axis category. It will discuss the purpose of each argument, the possible values it can take, and the expected outcome of each argument.
+
+#### axis_flip
+
+intercambia los ejes X e Y en un gráfico, default FALSE (hdtype Chk), possible values (Bin)
+
+#### axis_line_x_size
+
+
+tamaño o grosor de la línea del eje X en un gráfico, default 0, (hdtype Num)
+
+
+#### axis_reversed
+
+invierte los ejes del gráfico (por ejemplo, invierte el eje Y para que los valores más altos aparezcan en la parte inferior). default FALSE, (hdtype Chk), possible values (Bin)
+
+#### axis_text_angle
+
+ángulo del texto de los ejes en un gráfico. Esto puede ayudar a mejorar la legibilidad cuando hay muchas etiquetas o cuando son largas. default 0. (hdtype Num). possible values Num  [-90,90] grados
+
+#### axis_text_wrap
+
+number of words to wrap, default 6, (hdtype Num)
+
+#### axis_x_reversed
+
+invierte el orden de los datos en el eje X de un gráfico, default False, (hdtype Chk) (values Bin)
+
+#### axis_x_text_angle
+
+ángulo del texto de las etiquetas en el eje X, default NULL, (hdtype Num), possible values Num  [-90,90] grados
+
+#### axis_x_text_wrap
+
+numero de palabras en el texto de las etiquetas del eje X en un gráfico,  *permite que las etiquetas largas se muestren en múltiples líneas y eviten la superposición de texto. Default NULL, (hdtype Num)
+
+#### axis_y_reversed
+
+Se invierte el eje para que el número más alto esté más cerca del origen. Si el gráfico está invertido, el eje x se invierte de forma predeterminada. (invierte el orden de los datos en el eje Y de un gráfico.)
+Default FALSE, (hdtype Chk)
+
+#### axis_y_text_angle
+
+ángulo del texto de las etiquetas en el eje Y. Default NULL, (hdtype Num)
+possible values Num  [-90,90] grados
+
+#### axis_y_text_wrap
+numero de palabras en el texto de las etiquetas del eje Y en un gráfico. Default NULL. (hdtype Num)
+
+
+#### title_axis_color
+
+Specifies the color of the text used for the axis titles in a chart. This helps distinguish the axis titles from other text in the visualization. The default value is NULL, indicating that the color is not explicitly set. Its type is character (hdtype Clr).
+
+#### title_axis_size
+
+Defines the font size for the axis titles in a graphic. The default size is 13 points, and you can specify values from 1 to 20 points. Its type is numeric (hdtype Num).
+
+#### title_axis_x
+título para el eje X de un gráfico, (hdtype Txt)
+
+#### title_axis_y
+título para el eje Y de un gráfico, que describe la variable o los datos que se representan en el eje vertical. (hdtype Txt)
+
+#### title_axis_y2
+
+título para un segundo eje Y en un gráfico. En gráficos con dos ejes Y, cada uno puede representar diferentes tipos de datos o escalas, y este título ayudaría a identificar la naturaleza de los datos representados por el eje Y secundario. Default NULL. (hdtype Txt)
+

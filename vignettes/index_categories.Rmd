@@ -52,16 +52,10 @@ vignette: >
   }
 </style>
 
-This section provides an overview of all the categories in which specific arguments are classified.
-
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
-)
-```
-
 
 * [dataprep](dataprep_options.html)
+* [colorprep](colorsprep_options.html)
+* [titles](titles_options.html)
+* [axis](axis_options.html)
 
 
