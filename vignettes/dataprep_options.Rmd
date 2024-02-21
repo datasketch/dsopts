@@ -54,77 +54,76 @@ vignette: >
 
 </style>
 
-This document aims to explain the options available in the dataprep category. It will discuss the purpose of each argument, the possible values it can take, and the expected outcome of each argument.
+This page aims to explain the options available in the dataprep category. It will discuss the purpose of each argument, the possible values it can take, and the expected outcome of each argument.
 
 #### agg    
 
-Determines how data is summarized or combined (e.g., sums,    averages, maximums, minimums). It expects a character value   specifying the aggregation function (mean, max, min, etc.).   Its default value is "sum," and its hd_type is Categorical    (Cat).
-
+Determines how data is summarized or combined (e.g., sums, averages, maximums, minimums). It expects a character value (hdtype Cat) specifying the aggregation function (mean, max, min, etc.). Its default value is "sum".
 
 #### agg_na_rm
 
-Indicates whether missing values (NA) should be removed before aggregating data. It expects a value of type logical, which represents boolean values (with possible values being True or False). By default, its value is TRUE, and its hd_type is Check (Chk).
+Indicates whether missing values (NA) should be removed before aggregating data. It expects a value of type logical, which represents boolean values (hdtype Chk) True or False and by default, its value is TRUE.
 
 #### agg_text
 
-Used as a label in the column name indicating the type of aggregation performed on the data. It has a default value of NULL and an hd_type of Txt (Text). Possible values include 'sum VAR,' 'mean VAR,' 'max VAR,' indicating the aggregation type (summed, averaged, or maximum value taken) for the data in the column.
+Used as a label in the column name indicating the type of aggregation performed on the data. It expects a character value (hdtype Txt) and has a default value of NULL. Possible values include 'sum VAR,' 'mean VAR,' 'max VAR,' indicating the aggregation type (summed, averaged, or maximum value taken) for the data in the column.
 
 #### drop_na
 
-Enhances the clarity of visual representations by excluding missing data (NA) when set to TRUE. Its hdtype is Chk (Check), expecting a logical value (TRUE or FALSE) and by default, its value is FALSE.
+Enhances the clarity of visual representations by excluding missing data (NA) when set to TRUE. It expects a logical value (hdtype Chk) TRUE or FALSE, and by default, its value is FALSE.
 
 #### drop_na_var2
 
-Removes missing data (NA) from a second variable in the visualization. Its default value is FALSE, its `hdtype` is Chk (Check), and its possible values are TRUE or FALSE.
+Removes missing data (NA) from a second variable in the visualization. Its default value is FALSE and its possible values are TRUE or FALSE (hdtype Chk).
 
 #### format_number_prefix
 
-Formats numeric values using SI prefixes to represent large numbers in a more readable format such as k (thousands), M (millions) in numeric values.It expects a logical value (TRUE or FALSE), with a default value of FALSE and an hdtype of chk (Check).
+Formats numeric values using SI prefixes to represent large numbers in a more readable format such as k (thousands), M (millions) in numeric values. It expects a logical value (hdtype Chk) TRUE or FALSE, with a default value of FALSE.
 
 #### format_sample_cat
 
-Allows specifying how categorical data should be formatted, such as whether to convert them to uppercase, lowercase, etc. Its `hdtype` is Txt (text) and Its default value is NULL, which means no default formatting is applied.
+Allows specifying how categorical data should be formatted, such as whether to convert them to uppercase, lowercase, etc. It expects a character value (hdtype Txt) and its default value is NULL, which means no default formatting is applied.
 
 #### format_sample_dat
 
-Used to format date-type data and allows to specify how date-type data should be formatted (for example YYYY-MM-DD or DD/MM/YYYY). its hdtype is Txt (text) and the default value is NULL, indicating that no specific formatting is applied by default.
+Used to format date-type data and allows to specify how date-type data should be formatted (for example YYYY-MM-DD or DD/MM/YYYY). It expects a character value (hdtype Txt) and the default value is NULL, indicating that no specific formatting is applied by default.
 
 #### format_sample_num
 
-Used to set the format for numbers in the visualization. If no format is specified for axes, all numbers will use the format specified by this argument. The default value is 1500(Review) and this argument expects a `character` type (Review).
+Used to set the format for numbers in the visualization. If no format is specified for axes, all numbers will use the format specified by this argument. The default value is 1500 and this argument expects a `character` type (hdtype Txt).
 
 #### na_label
 
-Replaces NA values in a dataset with a specified label. For example, setting na_label = "Not Available" would display "Not Available" instead of NA in the visual representation of the data. It has an hdtype of Txt (text) and expects a character type value.
+Replaces NA values in a dataset with a specified label. For example, setting na_label = "Not Available" would display "Not Available" instead of NA in the visual representation of the data. It expects a character type value (hdtype Txt).
 
 #### percentage
 
-Calculates the percentage for the indicated numerical variable. Its default value is FALSE, its `hdtype` is chk (check) and this argument expects a logical value (TRUE or FALSE)
+Calculates the percentage for the indicated numerical variable. Its default value is FALSE and this argument expects a logical value (hdtype Chk) TRUE or FALSE.
 
 #### percentage_col
 
-Specifies the name or names of the categorical variable(s) for which you want to calculate percentages. For example, if you have a dataset with columns "category" and "value" representing different categories and their corresponding values, you can use percentage_col = "category" to calculate the percentage of each category. Its default value is NULL, and its `hdtype` is Txt (text).
+Specifies the name or names of the categorical variable(s) for which you want to calculate percentages. For example, if you have a dataset with columns "category" and "value" representing different categories and their corresponding values, you can use percentage_col = "category" to calculate the percentage of each category. Its default value is NULL, and expects a character value (hdtype Txt).
 
 #### percentage_intra
 
-Calculates percentages within individual categories or groups in a visualization. Defaulting to FALSE, with a expect logical value and its hdtype is Chk (Check).
+Calculates percentages within individual categories or groups in a visualization. Defaulting to FALSE, with a expect logical value TRUE or FALSE (hdtype Chk).
 
 #### percentage_name
 
-Specifies a character value that will be used as the name for the column containing the calculated percentages. It is used to provide a more descriptive name for the percentage column in the output visualization or dataset if `percentage` is TRUE. Its `hdtype` is Txt (text) and the type of the input is character (text).
+Specifies a character value that will be used as the name for the column containing the calculated percentages. It provides a more descriptive name for the percentage column in the output visualization or dataset. By default, the value is NULL and The type value is character (hdtype Txt).
 
 #### tooltip_agg_collapse_rows_template
 
-Controls the aggregation of data in tooltips, determining whether similar or related rows are collapsed into a single entry in the tooltip to avoid repetition. It takes a dataframe and a template as inputs and returns a column of strings with the applied template. The template can apply different aggregations such as mean or max. Its `hdtype` is Cat (categorical) and  Its possible values are functions such as sum, mean, etc., which are used to specify the type of aggregation for the tooltip.
+Controls the aggregation of data in tooltips, determining whether similar or related rows are collapsed into a single entry in the tooltip to avoid repetition. It takes a dataframe and a template as inputs and returns a column of strings with the applied template. The template can apply different aggregations such as mean or max. The template can apply different aggregations such as mean or max. Its possible values are functions such as sum, mean, etc (hdtype Cat) which are used to specify the type of aggregation for the tooltip.
 
 #### tooltip_include_all_vars
 
-Includes all available variables in the entered dataframe for visualization. It has a default value of FALSE and Its `hdtype` is Chk (Check).
+Includes all available variables in the entered dataframe for visualization. It has a default value of FALSE and and expects a logical value TRUE or FALSE (hdtype Chk).
 
 #### tooltip_sep_all_vars
 
-Specifies the separator used in tooltips when multiple variables are included, allowing for clear separation and organization of information. Its `hdtype` is Cat (categorical).
+Specifies the separator used in tooltips when multiple variables are included, allowing for clear separation and organization of information. It expects a character value (hdtype Cat).
 
 #### tooltip_template
 
-Used as a customization template for tooltips, this template allows you to customize the content and format of tooltips in a visualization, using specific variables from the dataframe to display detailed and relevant information when hovering over elements of the visualization.Its hdtype is Txt (text), and the possible values are text that match the names of variables in the dataframe.
+Used as a customization template for tooltips, this template allows you to customize the content and format of tooltips in a visualization, using specific variables from the dataframe to display detailed and relevant information when hovering over elements of the visualization. The possible values are character (hdtype Txt) that match the names of variables in the dataframe.

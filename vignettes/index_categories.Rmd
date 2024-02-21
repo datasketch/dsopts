@@ -54,7 +54,7 @@ vignette: >
 
 
 * [dataprep](dataprep_options.html)
-* [colorprep](colorsprep_options.html)
+* [colorprep](colorprep_options.html)
 * [titles](titles_options.html)
 * [axis](axis_options.html)
 

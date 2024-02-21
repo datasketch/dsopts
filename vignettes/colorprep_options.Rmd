@@ -63,14 +63,14 @@ Specifies the variable used to color elements in a visualization. It determines 
 
 #### color_palette_categorical
 
-Specifies the color palette used for categorical data where each category is represented by a different color. This argument takes a list of colors in any valid format. By default it has the value `list(#385573, #ffa92a, #f06142, #99e8b3, #32a8ce, #996295, #e59fd7)` (hdtype Lst[Clr]).
+Specifies the color palette used for categorical data where each category is represented by a different color. This argument takes a list of colors (hdtype Lst[Clr]) in any valid format. By default, it has the value `list(#385573, #ffa92a, #f06142, #99e8b3, #32a8ce, #996295, #e59fd7)`.
 
 
 #### color_palette_sequential
 
-Specifies the color palette used for sequential data, where every color represent a sequence or gradient. Typically used to show intensity or magnitude. It received a list of colors in any valid format, its default value is `list(#b8f3ca, #add79c, #8dbd93, #70a38e, #568989, #3f6f83, #28557d)` (hdtype Lst[Clr]).
+Specifies the color palette used for sequential data, where every color represent a sequence or gradient. Typically used to show intensity or magnitude. It received a list of colors (hdtype Lst[Clr]) in any valid format, its default value is `list(#b8f3ca, #add79c, #8dbd93, #70a38e, #568989, #3f6f83, #28557d)`.
 
 
 #### color_palette_type
 
-Specifies the type of color palette to be used in the visualization. It defaults to NULL and its possible values include "categorical," "sequential," and "diverging." (hdtype Cat). 
+Specifies the type of color palette to be used in the visualization. It defaults to NULL and its possible values include "categorical," "sequential," and "diverging" (hdtype Cat). 

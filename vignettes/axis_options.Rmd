@@ -56,67 +56,65 @@ This page aims to explain the options available in the axis category. It will di
 
 #### axis_flip
 
-intercambia los ejes X e Y en un gráfico, default FALSE (hdtype Chk), possible values (Bin)
+Swaps the X and Y axes in a plot. By default, it is set to FALSE, meaning the axes are not flipped. When set to TRUE, the orientation of the plot changes. This argument expects a logical values (hdtype Chk).
 
 #### axis_line_x_size
 
-
-tamaño o grosor de la línea del eje X en un gráfico, default 0, (hdtype Num)
-
+Specifies the size or thickness of the X-axis line in a plot. The default size is 0 and It expects a value of type numeric (hdtype Num).
 
 #### axis_reversed
 
-invierte los ejes del gráfico (por ejemplo, invierte el eje Y para que los valores más altos aparezcan en la parte inferior). default FALSE, (hdtype Chk), possible values (Bin)
+Reverses the axes of the plot, such as flipping the Y-axis so that higher values appear at the bottom.The default value is FALSE, meaning the axes are not reversed. Its value type is logical (hdtype Chk), with possible values of TRUE or FALSE. 
 
 #### axis_text_angle
 
-ángulo del texto de los ejes en un gráfico. Esto puede ayudar a mejorar la legibilidad cuando hay muchas etiquetas o cuando son largas. default 0. (hdtype Num). possible values Num  [-90,90] grados
+Specifies the angle of the axis text in a graphic. This can help improve readability when there are many labels or when labels are long. The default angle is 0 degrees, which means the text is horizontal.You can specify an angle between -90 and 90 degrees to rotate the text. It expects a value of type numeric (hdtype Num).
 
 #### axis_text_wrap
 
-number of words to wrap, default 6, (hdtype Num)
+Specifies the number of words to wrap in axis labels before wrapping onto the next line. By default, it is set to 6, so axis labels will wrap to the next line after 6 words. This allows long labels to be displayed on multiple lines, improving readability. It expects a value of type numeric (hdtype Num).
 
 #### axis_x_reversed
 
-invierte el orden de los datos en el eje X de un gráfico, default False, (hdtype Chk) (values Bin)
+Reverses the order of the data on the X-axis of a chart. When set to True, the highest values appear on the left and the lowest values on the right. It expects a value of type logical (hdtype Chk).
 
 #### axis_x_text_angle
 
-ángulo del texto de las etiquetas en el eje X, default NULL, (hdtype Num), possible values Num  [-90,90] grados
+Specifies the angle of the labels on the X-axis in a chart.The default value is NULL, which means no rotation is applied. Also, you can specify an angle between -90 and 90 degrees to rotate the text. It expects a value of type numeric (hdtype Num).
 
 #### axis_x_text_wrap
 
-numero de palabras en el texto de las etiquetas del eje X en un gráfico,  *permite que las etiquetas largas se muestren en múltiples líneas y eviten la superposición de texto. Default NULL, (hdtype Num)
+Specifies the number of words in the labels on the X-axis in a chart. This allows long labels to be displayed on multiple lines and avoids text overlap. The default value is NULL, indicating that no word wrapping is applied. It expects a value of type numeric (hdtype Num).
 
 #### axis_y_reversed
 
-Se invierte el eje para que el número más alto esté más cerca del origen. Si el gráfico está invertido, el eje x se invierte de forma predeterminada. (invierte el orden de los datos en el eje Y de un gráfico.)
-Default FALSE, (hdtype Chk)
+Inverts the axes of the chart (e.g., reverses the Y-axis so that higher values are closer to the origin). If the chart is flipped, the X-axis is reversed by default and means that the order of the data on the Y-axis is reversed. The default value is FALSE, indicating that the axes are not reversed. It expects a value of type logical (hdtype Chk).
 
 #### axis_y_text_angle
 
-ángulo del texto de las etiquetas en el eje Y. Default NULL, (hdtype Num)
-possible values Num  [-90,90] grados
+Controls the angle of the labels on the Y-axis. The default value is NULL, which means no rotation is applied. The angle can range from -90 to 90 degrees. It expects a value of type numeric (hdtype Num).
 
 #### axis_y_text_wrap
-numero de palabras en el texto de las etiquetas del eje Y en un gráfico. Default NULL. (hdtype Num)
 
+Specifies the number of words in the labels of the Y-axis in a chart. This parameter allows long labels to be displayed on multiple lines, preventing text overlap. The default value is NULL, indicating that no word wrapping is applied. It expects a value of type numeric (hdtype Num).
 
 #### title_axis_color
 
-Specifies the color of the text used for the axis titles in a chart. This helps distinguish the axis titles from other text in the visualization. The default value is NULL, indicating that the color is not explicitly set. Its type is character (hdtype Clr).
+Specifies the color of the text used for the axis titles in a chart. This helps distinguish the axis titles from other text in the visualization. The default value is NULL, indicating that the color is not explicitly set. It expects a value of type character (hdtype Clr).
 
 #### title_axis_size
 
-Defines the font size for the axis titles in a graphic. The default size is 13 points, and you can specify values from 1 to 20 points. Its type is numeric (hdtype Num).
+Defines the font size for the axis titles in a graphic. The default size is 13 points, and you can specify values from 1 to 20 points. It expects a value of type numeric (hdtype Num).
 
 #### title_axis_x
-título para el eje X de un gráfico, (hdtype Txt)
+
+Specifies the title for the X-axis of a chart, describing the variable or data represented on the horizontal axis. It expects a value of type character (hdtype Txt). 
 
 #### title_axis_y
-título para el eje Y de un gráfico, que describe la variable o los datos que se representan en el eje vertical. (hdtype Txt)
+
+Specifies the title for the Y-axis of a chart, describing the variable or data represented on the vertical axis. It expects a value of type character (hdtype Txt).
 
 #### title_axis_y2
 
-título para un segundo eje Y en un gráfico. En gráficos con dos ejes Y, cada uno puede representar diferentes tipos de datos o escalas, y este título ayudaría a identificar la naturaleza de los datos representados por el eje Y secundario. Default NULL. (hdtype Txt)
+Specifies the title for the secondary Y-axis in a chart. In charts with two Y-axes, each axis can represent different types of data or scales, and this title would help identify the nature of the data represented by the secondary Y-axis. The default value is NULL and the argument expects a value of type character (hdtype Txt).
 
