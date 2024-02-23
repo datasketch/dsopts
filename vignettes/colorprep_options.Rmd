@@ -56,7 +56,6 @@ vignette: >
 
 This page aims to explain the options available in the colorprep category. It will discuss the purpose of each argument, the possible values it can take, and the expected outcome of each argument.
 
-
 #### color_by
 
 Specifies the variable used to color elements in a visualization. It determines how elements are colored based on different categories or groups. When set to NULL, a default color scale is often applied, and expects a character value (hdtype Txt) representing the variable name.
@@ -65,12 +64,22 @@ Specifies the variable used to color elements in a visualization. It determines 
 
 Specifies the color palette used for categorical data where each category is represented by a different color. This argument takes a list of colors (hdtype Lst[Clr]) in any valid format. By default, it has the value `list(#385573, #ffa92a, #f06142, #99e8b3, #32a8ce, #996295, #e59fd7)`.
 
+#### color_palette_divergening
+
+Specifies the color palette used to represent diverging data, where colors represent two opposite extremes or value ranges, such as hot/cold, high/low, etc. The argument expects a list of colors (hdtype Lst[Clr]) in any valid format. By default, it is set to list(#ff844e, #ffa154, #ffc48b, #eef0f1, #a0c7da, #57a0c5, #255b89).
 
 #### color_palette_sequential
 
 Specifies the color palette used for sequential data, where every color represent a sequence or gradient. Typically used to show intensity or magnitude. It received a list of colors (hdtype Lst[Clr]) in any valid format, its default value is `list(#b8f3ca, #add79c, #8dbd93, #70a38e, #568989, #3f6f83, #28557d)`.
 
-
 #### color_palette_type
 
 Specifies the type of color palette to be used in the visualization. It defaults to NULL and its possible values include "categorical," "sequential," and "diverging" (hdtype Cat). 
+
+#### highlight_values_color
+
+Specifies the color used to highlight specific values or elements in the visualization. The default color is #50c5b7, and it expects a value of type character (hdtype Clr), which can be specified in any valid color format.
+
+#### na_color
+
+Specifies the color used to represent missing or "NA" (Not Available) data. The default color is #cbcdcf, and it expects a value of type character (hdtype Clr), which can be specified in any valid color format.

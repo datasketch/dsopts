@@ -113,7 +113,7 @@ Controls the alignment of the title within the visualization. By default, the ti
 
 #### title_axis_color
 
-Specifies the color of the text used for the axis titles in a chart. This helps distinguish the axis titles from other text in the visualization. The default value is NULL, indicating that the color is not explicitly set. Its type is character (hdtype Clr).
+Specifies the color of the text used for the axis titles in a chart. This helps distinguish the axis titles from other text in the visualization. The default value is NULL, indicating that the color is not explicitly set. It expects a value of type character (hdtype Clr).
 
 #### title_axis_size
 

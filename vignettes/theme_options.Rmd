@@ -1,0 +1,817 @@
+---
+title: "theme options"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{theme options}
+  %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{=html}
+<style>
+  body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+  }
+  h1, h2, h3 {
+    color: #007bff;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  table, th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+  }
+  th {
+    background-color: #007bff;
+    color: white;
+  }
+  .section-title {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  /* Estilos de la barra de desplazamiento */
+  body::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f8f9fa;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #007bff;
+  }
+
+  body::-webkit-scrollbar-thumb:hover {
+    background-color: #0056b3;
+  }
+</style>
+```
+This page aims to explain the options available in the theme category. It
+will discuss the purpose of each argument, the possible values it can
+take, and the expected outcome of each argument.
+
+#### animation_duration
+
+Specifies the duration of animations in the visualization, in
+milliseconds. The default value is 0, indicating no animation. It
+expects a value of type numeric (hdtype Num) in the range [0, 3000]
+milliseconds.
+
+#### axis_line_color
+
+Specifies the color of the axis lines in a graphic. The default color is
+`#7e858c`. It expects a value of type character (hdtype Clr).
+
+#### axis_line_size
+
+Controls the thickness of the axis lines in a graphic. A larger size
+makes the axes more prominent, helping to emphasize them within the
+visualization. The default value is NA, which means the size is not
+explicitly set. It expects a value of type numeric (hdtype Num).
+
+#### axis_line_x_size
+
+Specifies the size or thickness of the X-axis line in a plot. The
+default size is 0 and It expects a value of type numeric (hdtype Num).
+
+#### axis_line_y_size
+
+Specifies the size or thickness of the Y-axis line in a plot. The
+default size is 1 and It expects a value of type numeric (hdtype Num).
+
+#### axis_margin_x
+
+Controls the margin on the X-axis of the graphic. Which is the space
+between the edge of the chart area and the data points. A larger margin
+provides breathing room for the data points, preventing them from
+getting too close to the axis lines or the edge of the chart. The
+default value is NULL and it expects a value of type numeric (hdtype
+Num).
+
+#### axis_margin_y
+
+Controls the margin around the Y-axis in the graphic, which is the space
+between the edge of the chart area and the data points along the Y-axis.
+The default value is NA and it expects a value of type numeric (hdtype
+Num).
+
+#### axis_show
+
+Controls the visibility of the axes in a graphic. By default, it is set
+to FALSE, meaning the axes are not shown. It expects a logical value
+(hdtype Chk).
+
+#### axis_tick_length
+
+Specifies the length of the tick marks along the axes of a chart. These
+small lines help indicate specific values on the axes. The default
+length is 10 and it expects a value of type numeric (hdtype Num).
+
+#### axis_ticks_color
+
+Determines the color of the tick marks along the axes of a chart. If
+set, this color is applied to the small lines that indicate specific
+values on the axes. The default value is NA and this argument expects a
+value of type character (hdtype Clr).
+
+#### background_color
+
+Specifies the background color for the entire visualization. The default
+color is #fafafa, which provides a neutral and clean background. It
+expects a value of type character (hdtype Clr).
+
+#### bar_padding
+
+Specifies the spacing between bars in a bar chart. The default value is
+0. This parameter can change the overall appearance of the chart, making
+it more compact or more spaced out. It expects a numeric value (hdtype
+Num).
+
+#### bar_width
+
+Specifies the width of the bars in a bar chart. Adjusting this parameter
+can visually impact the chart's appearance, making it more compact or
+more spaced out. The default value is 0 and it expects a numeric value
+(hdtype Num).
+
+#### border_color
+
+Specifies the color of the border around the visualization. The default
+value is NULL, indicating no border color is set. It expects a value of
+type character (hdtype Clr).
+
+#### branding_background_color
+
+Specifies the background color for the area of the visualization
+dedicated to the logo. The default value is NULL, but you can specify
+the color using any valid format. It expects a value of type character
+(hdtype Clr).
+
+#### branding_include
+
+Controls the presence of the logo in the visualization. By default, it
+is set to FALSE, indicating that the logo is not included.It expects a
+logical value (hdtype Chk), either TRUE or FALSE.
+
+#### branding_text
+
+Specifies the text used for the footer or logo space. By default, it is
+set to "Created with Datasketch <http://datasketch.co>". You can
+customize this text to include your own branding or attribution
+information. It expects a value of type character (hdtype Txt).
+
+#### caption
+
+Provide a descriptive or explanatory text that accompanies a
+visualization, providing additional context such as the data source. It
+expects a value of type character (hdtype Txt).
+
+#### caption_align
+
+Controls the alignment of the credits in the visualization. The default
+alignment is "left" and it expects a value of type character (hdtype
+Cat).
+
+#### caption_color
+
+Controls the color of the text for the credits in the visualization. The
+default color is #28333f and it expects a value of type character
+(hdtype Clr).
+
+#### caption_link
+
+Specify a link associated with the credits of the graph. It accepts
+values of type character (hdtype Txt), where a valid URL can be provided
+as a string. The default value is NULL.
+
+#### caption_margin
+
+Specifies the margin around the credits of the visualization. The
+default value is 15 and its it expects a value of type numeric (hdtype
+Num).
+
+#### caption_size
+
+Specifies the font size, in points, of the text in the credits of the
+visualization. The default value is 12 and it expects a value of type
+numeric (hdtype Num).
+
+#### caption_weight
+
+Specifies the font weight used for the credits in a visualization. A
+higher weight corresponds to a bolder text. The default value is NULL
+and it expects a value of type character (hdtype Cat).
+
+#### color_bins
+
+This option divides the data into categories based on color ranges. This
+feature is particularly useful for creating heatmaps or graphs that
+depend on the intensity of values. By default, it is set to NULL and it
+expects a logical value (hdtype Chk).
+
+#### color_bins_method
+
+Determines how data is grouped into bins (intervals) based on their
+values and assigned colors in graphs like heatmaps or histograms. Common
+methods include "quantile," "equal," "k-means," and others, influencing
+the distribution of data into color categories. The default value is
+NULL, expecting a character value (hdtype Cat).
+
+#### color_palette_categorical
+
+Specifies the color palette used for categorical data where each
+category is represented by a different color. This argument takes a list
+of colors (hdtype Lst[Clr]) in any valid format. By default, it has the
+value
+`list(#385573, #ffa92a, #f06142, #99e8b3, #32a8ce, #996295, #e59fd7)`.
+
+#### color_palette_divergening
+
+Specifies the color palette used to represent diverging data, where
+colors represent two opposite extremes or value ranges, such as
+hot/cold, high/low, etc. The argument expects a list of colors (hdtype
+Lst[Clr]) in any valid format. By default, it is set to `list(#ff844e,#ffa154, #ffc48b, #eef0f1, #a0c7da, #57a0c5, #255b89)`.
+
+#### color_palette_sequential
+
+Specifies the color palette used for sequential data, where every color
+represent a sequence or gradient. Typically used to show intensity or
+magnitude. It received a list of colors (hdtype Lst[Clr]) in any valid
+format, its default value is
+`list(#b8f3ca, #add79c, #8dbd93, #70a38e, #568989, #3f6f83, #28557d)`.
+
+#### datalabel_color
+
+Specifies the color of the text for data labels. By default, it is NULL
+and it expects a value of type character (hdtype Clr).
+
+#### datalabel_format_sample
+
+Specifies the format of the data labels. By default, it is NULL and it
+expects a value of type character (hdtype Txt).
+
+#### datalabel_formmater_js
+
+Specifies a JavaScript function to customize the format of the data
+labels. By default, it is set to FALSE, indicating that no custom
+formatting function is applied. This argument expects a logical value
+(hdtype Chk).
+
+#### datalabel_horizontal_align
+
+Determines the horizontal alignment of the data labels in a graph. By
+default, it is set to center, meaning the labels are centered
+horizontally. This argument expects a character value (hdtype Cat), with
+possible values of center, right, and left.
+
+#### datalabel_offset
+
+Specifies the offset of the data labels. It is used to adjust the
+position of labels that display information about specific data points,
+such as values or names. The default value is 0, which means no offset.
+It expects a numeric value (hdtype Num).
+
+#### datalabel_offset_x
+
+Specifies the horizontal offset of data labels. This adjustment helps
+prevent label overlap and enhances readability. The default value is
+1.1, which provides a slight rightward shift to the labels. It expects a
+numeric value (hdtype Num).
+
+#### datalabel_offset_y
+
+Adjusts the vertical position (Y-axis) of data labels in a graph,
+helping to prevent text overlap. By default, this value is NULL,
+allowing labels to be automatically positioned. It expects a numeric
+value (hdtype Num).
+
+#### datalabel_size
+
+Specifies the font size of data labels in a graph. The default value is
+NULL and it expects a numeric value (hdtype Num).
+
+#### datalabel_text_outline_show
+
+Turns the outline around the text of data labels on the chart on or off.
+Enabling outline can improve readability against complex or similarly
+colored backgrounds. By default, this feature is enabled (TRUE) and
+expects a logical value (hdtype Chk).
+
+#### datalabel_vertical_align
+
+Specifies the vertical alignment of data labels in a chart. The default
+alignment is center, meaning labels are centered vertically. Other
+possible values include top and bottom, allowing labels to align at the
+top or bottom of the associated data points. It expects a character
+value (hdtype Cat).
+
+#### format_sample_cat
+
+Allows specifying how categorical data should be formatted, such as
+whether to convert them to uppercase, lowercase, etc. It expects a
+character value (hdtype Txt) and its default value is NULL, which means
+no default formatting is applied.
+
+#### format_sample_dat
+
+Used to format date-type data and allows to specify how date-type data
+should be formatted (for example YYYY-MM-DD or DD/MM/YYYY). It expects a
+character value (hdtype Txt) and the default value is NULL, indicating
+that no specific formatting is applied by default.
+
+#### format_sample_num
+
+Used to set the format for numbers in the visualization. If no format is
+specified for axes, all numbers will use the format specified by this
+argument. The default value is 1500 and this expects a value of type
+character (hdtype Txt).
+
+#### grid_color
+
+Specifies the overall color of the grid lines in a graph. This parameter
+can affect both the X and Y axis grid lines if individual colors are not
+specified (grid_x_color, grid_y_color). The default color is #d1d9db,
+which is a light gray. It expects a value of type character (hdtype
+Clr).
+
+#### grid_line_type
+
+Specifies the line style for the grid in a graph, such as solid, dotted,
+or dashed lines. The default style is "Dot" for dotted lines It expects
+a character value (hdtype Cat), with options like "dot", "line", and
+"dash".
+
+#### grid_size
+
+Specifies the general size of the grid lines in a graph. The default
+size is 0.3. it expects a value of type numeric (hdtype Num).
+
+#### grid_x_color
+
+Determines the color of the grid lines corresponding to the X-axis in a
+chart. This color is crucial for distinguishing the divisions or marks
+along the X-axis. The default color is #d1d9db. it expects a value of
+type character (hdtype Clr).
+
+#### grid_x_line_type
+
+Specifies the line type (solid, dashed, etc.) for the grid on the
+X-axis. By default, this parameter is set to NULL. it expects a value of
+type character (hdtype Cat).
+
+#### grid_x_show
+
+Determines whether the grid lines along the X-axis are displayed. When
+set to TRUE, the grid lines are shown. The default value is TRUE and it
+expects a value of type logical (hdtype Chk).
+
+#### grid_x_size
+
+Specifies the size of the grid lines associated with the X-axis in a
+chart. A larger size makes the grid lines more noticeable. The default
+value is 0, indicating that the grid lines are not visible. it expects a
+value of type numeric (hdtype Num).
+
+#### grid_x_width
+
+Specifies the width of the grid lines corresponding to the X-axis in a
+chart. The default value is 1, indicating a standard width for the grid
+lines. It expects a value of type numeric (hdtype Num).
+
+#### grid_y_color
+
+Defines the color of the grid lines along the Y-axis in a chart. It
+serves to differentiate the divisions or marks on the Y-axis. The
+default color is #d1d9db. This argument expects a value of type
+character (hdtype Clr)
+
+#### grid_y_line_type
+
+Determines the style of the grid lines along the Y-axis. It allows you
+to specify whether the lines should be solid, dotted, dashed, or another
+style. The default value is NULL, meaning the line style is not
+explicitly set. This argument expects a value of type character (hdtype
+Cat).
+
+#### grid_y_show
+
+Controls the visibility of the horizontal grid lines. When set to TRUE,
+the grid lines along the Y-axis are displayed. If set to FALSE, the
+horizontal grid lines will not be displayed. The default value is TRUE,
+meaning the grid lines are shown. This argument expects a value of type
+logical (hdtype Chk).
+
+#### grid_y_size
+
+Specifies the size of the horizontal grid lines (related to the Y-axis)
+in a graphic. The default value is NULL and this argument expects a
+value of type numeric (hdtype Num).
+
+#### grid_y_width
+
+Specifies the width of the grid lines corresponding to the Y-axis in a
+chart. The default value is 1, which represents a standard width. This
+argument expects a value of type numeric (hdtype Num).
+
+#### highlight_values_color
+
+Specifies the color used to highlight specific values or elements in the
+visualization. The default color is #50c5b7, which is a shade of teal.
+It expects a value of type character (hdtype Clr).
+
+#### legend_background
+
+Specifies the background color of the legend in the chart. The default
+color is transparent and it expects a value of type character (hdtype
+Clr).
+
+#### legend_border_width
+
+Specifies the width of the border around the legend. The default value
+is 0, which means no border is displayed. Increasing the value will
+increase the widht of the border. It expects a numeric value (hdtype
+Num).
+
+#### legend_margin
+
+Specifies the width of the border around the legend in a visualization.
+This affects the spacing between the legend and other elements of the
+graph or the edges of the visualization. The default value is 0 and it
+expects a value of type numeric (hdtype Num).
+
+#### legend_margin_bottom
+
+Specifies the margin at the bottom of the legend in a visualization. The
+default value is NULL, meaning no specific bottom margin is applied. It
+expects a value of type numeric (hdtype Num).
+
+#### legend_margin_left
+
+Specifies the margin to the left of the legend in a visualization. The
+default value is NULL, meaning no specific left margin is applied. It
+expects a value of type numeric (hdtype Num).
+
+#### legend_margin_right
+
+Specifies the margin to the right of the legend in a visualization. The
+default value is NULL, meaning no specific right margin is applied. It
+expects a value of type numeric (hdtype Num).
+
+#### legend_margin_top
+
+Adjusts the top margin of the legend in the chart. The default value is
+NULL, meaning no specific top margin is applied. It expects a value of
+type numeric (hdtype Num).
+
+#### legend_show
+
+Ccontrols the visibility of the legend in a chart. The default value is
+TRUE, meaning the legend is visible. It expects a value of type logical
+(hdtype Chk).
+
+#### legend_text_color
+
+Specifies the color of the text in the legend. By default, the color is
+not explicitly set (NULL). It expects a value of type color (hdtype
+Clr).
+
+#### legend_text_family
+
+Specifies the font family for the text in the legend. The default font
+family is IBM Plex Sans, providing a clean and modern look for the
+legend text. It expects a value of type character (hdtype Fnt).
+
+#### legend_text_horizontal_align
+
+Controls the horizontal alignment of the text within the legend box. The
+default is center, which centers the text horizontally. Other possible
+values include left and right. It expects a value of type character
+(hdtype Cat).
+
+#### legend_text_margin
+
+Sets the margin around the text inside the legend. The default value
+isNULL, indicating no specific margin is set. It expects a numeric value
+(hdtype Num).
+
+#### legend_text_margin_bottom
+
+Defines the margin or space below the text of each item in the legend,
+useful for controlling the spacing and arrangement of elements within
+the legend. The default value is 0. It expects a value of type numeric
+(hdtype Num).
+
+#### legend_text_margin_left
+
+Defines the margin to the left of the text within the legend,
+controlling the spacing and alignment of the text inside the legend. Its
+default value is NULL, and it expects a numeric value (hdtype Num).
+
+#### legend_text_margin_right
+
+Sets the margin to the right of the text within the legend, controlling
+the spacing and alignment of the text inside the legend. Its default
+value is NULL, and it expects a numeric value (hdtype Num).
+
+#### legend_text_margin_top
+
+Sets the margin or space at the top of the text within the legend,
+controlling the spacing and alignment of the text inside the legend. Its
+default value is 0, and it expects a numeric value (hdtype Num).
+
+#### legend_text_size
+
+Determines the size of the text inside the legend. Its default value is
+11, and it expects a numeric value representing the size in points
+(hdtype Num).
+
+#### legend_text_vertical_align
+
+Specifies the vertical alignment of the text within the legend. The
+default value is center, which vertically centers the text. Other
+possible values include top and bottom. It expects a value of type
+character (hdtype Cat).
+
+#### line_color
+
+Allows for the customization of line colors in a graph. The default
+color is #BEC7D0, a light gray shade. This parameter expects a value of
+type character (hdtype Clr).
+
+#### line_marker
+
+Controls the visibility of markers in a line chart. When set to TRUE,
+markers such as points, circles, or squares (as specified by
+line_marker_type) are displayed along the lines. The default value is
+FALSE, meaning that markers are not shown. This parameter expects a
+logical value (hdtype Chk).
+
+#### line_marker_size
+
+Defines the size of markers in a line graph. Markers are small symbols
+(such as circles, squares, triangles) placed at data points along the
+line. The default size is 4. This parameter expects a numeric value
+(hdtype Num).
+
+#### line_size
+
+Defines the thickness of the lines in a line chart.The default size is
+0.5 and this parameter expects a numeric value (hdtype Num).
+
+#### locale
+
+Defines the regional settings that affect how data is presented, such as
+date, currency, and number format. The default value is en-US, which
+corresponds to English (United States). You can specify other locales to
+format your data according to different regional conventions. This
+parameter expects a character value (hdtype Cat).
+
+#### logo
+
+Specifies the PNG, SVG, or link of the logo to be added to the graph's
+canvas. The default value is NULL, indicating that no logo is added.
+This parameter expects a character type (hdtype Img).
+
+#### logo_height
+
+Specifies the height of the logo in the graph's canvas. The default
+value is NULL, but you can provide a numeric value to set the height of
+the logo in pixels. This parameter expects a numeric value (hdtype Num).
+
+#### logo_position
+
+Defines the position of the logo within the chart's canvas. The default
+position is "right," indicating that the logo is placed on the right
+side of the chart. You can specify a different position by providing one
+of the following values:
+
+-   topleft
+
+-   topcenter
+
+-   topright
+
+-   centerleft
+
+-   centercenter
+
+-   centerright
+
+-   bottomleft
+
+-   bottomcenter
+
+-   bottomright
+
+This parameter expects a character value (hdtype Cat).
+
+#### logo_width
+
+Defines the width of the logo in the graph. The default value is NULL,
+which means that the width is not specify and the logo will be displayed
+at its original size. You can specify a numeric value (hdtype Num) to
+adjust the width of the logo.
+
+#### map_graticule
+
+Controls the display of a grid of lines (meridians and parallels) on a
+map for geographic reference. When set to TRUE, the grid is displayed;
+when set to FALSE, it is hidden. The default value is FALSE and this
+parameter expects a logical value (hdtype Chk).
+
+#### map_graticule_interval
+
+Sets the interval between lines of the graticule on a map. These lines
+typically represent meridians and parallels to aid in geographic
+orientation. The default value is 5, meaning that lines are drawn every
+5 degrees. This parameter expects a numeric value (hdtype Num)
+representing the interval in degrees.
+
+#### map_provider_tile
+
+Specifies the tile provider used for map backgrounds. The default value
+is "leaflet" and expects a value of type character (hdtype Cat)
+representing the tile provider's name.
+
+#### plot_background_color
+
+Defines the background color of the plot area in a graph. The default
+value is NA, meaning no specific color is set. This parameter expects a
+value of type character (hdtype Clr) representing a color.
+
+#### plot_border_color
+
+Defines the color of the border around the main plot area in a chart.
+The default color is #d1d9d, light gray color. This parameter expects a
+value of type character (hdtype Clr).
+
+#### plot_border_width
+
+Determines the width of the border around the main plot area in a chart.
+The default width is 1 and expects a value of type numeric (hdtype Num).
+
+#### plot_margin_bottom
+
+Controls the margin at the bottom of the plot area. It affects the space
+between the plot area and other elements of the chart or the edges of
+the visualization. The default value is NULL and expects a value of type
+numeric (hdtype Num).
+
+#### plot_margin_left
+
+Controls the margin on the left side of the plot area. It affects the
+space between the plot area and other elements of the chart or the edges
+of the visualization. The default value is NULL and expects a value of
+type numeric (hdtype Num).
+
+#### plot_margin_right
+
+Controls the margin on the right side of the plot area. Adjusting this
+margin can be useful to ensure that all elements of the chart are
+visible and not cramped. The default value is NA, expects a value of
+type numeric (hdtype Num).
+
+#### plot_margin_top
+
+Controls the margin at the top of the plot area. The default value is
+10, providing a margin of 10 units. This parameter expects a value of
+type numeric (hdtype Num).
+
+#### subtitle_align
+
+Determines the alignment of the subtitle in the visualization. The
+default alignment is left and its type is character (hdtype Cat),
+meaning it accepts values such as "left", "center", or "right".
+
+#### subtitle_color
+
+Defines the color of the subtitle text in the visualization. You can
+specify the color using any valid format. The default color is #28333f
+and its type is character (hdtype Clr).
+
+#### subtitle_size
+
+Specifies the font size, in points, of the subtitle text in the
+visualization. The default size is 17 points and it expects a value of
+type numeric (hdtype Num).
+
+#### subtitle_weight
+
+Specifies the font weight of the subtitle text in the visualization.The
+default weight is 700, and its type is character (hdtype Cat).
+
+#### table_table_background+
+
+Defines the background color for the entire table. The default color is #ffffff, which corresponds to white. You can change this value to
+customize the background color of the table. This parameter expects a
+color value (hdtype Clr).
+
+#### text_color
+
+Specifies the general text color in the visualization. The default color
+is #28333f, which is a dark blue-gray. You can change this value to
+customize the text color throughout the visualization. This parameter
+expects a color value (hdtype Clr).
+
+#### text_size
+
+Specifies the general text size in the visualization. The default size
+is 12, but you can adjust this value to make the text larger or smaller
+throughout the visualization. This parameter expects a numeric value
+(hdtype Num).
+
+#### text_wrap
+
+Determines the maximum number of characters that can appear in a single
+line of text in the visualization. If a text string exceeds this limit,
+it will wrap onto the next line. The default value is 12, meaning that
+text will wrap after 12 characters. This parameter expects a numeric
+value (hdtype Num).
+
+#### title_align
+
+Controls the alignment of the title within the visualization. By
+default, the title is aligned to the left, but you can adjust it to be
+centered or aligned to the right. it expects a value of type numeric
+(hdtype Cat).
+
+#### title_axis_color
+
+Specifies the color of the text used for the axis titles in a chart.
+This helps distinguish the axis titles from other text in the
+visualization. The default value is NULL, indicating that the color is
+not explicitly set. It expects a value of type character (hdtype Clr).
+
+#### title_axis_size
+
+Defines the font size for the axis titles in a graphic. The default size
+is 13 points, and you can specify values from 1 to 20 points. Its type
+is numeric (hdtype Num).
+
+#### title_color
+
+Specifies the color of the text used for the main title in a
+visualization. The default color is #28333f and it expects a value of
+type character(hdtype Clr).
+
+#### title_family
+
+Specifies the font family used for the main title in a visualization.
+The default font family is IBM Plex Sans and it expects a value of type
+character(hdtype Fnt).
+
+#### title_size
+
+Determines the font size of the visualization's title. The default size
+is 21 points but you can adjust this value from 1 to 20 points. It
+expects a value of type numeric (hdtype Num).
+
+#### title_weight
+
+Specifies the font weight of the visualization's title. The default
+weight is 700 (bold style), but you can choose between several options
+such as thin, light, regular, medium, bold, and black. It expects a
+value of type character (hdtype Cat).
+
+#### tooltip_background
+
+Defines the background color of tooltips that provide additional information when hovering over elements in the visualization. The default color is #ffffff (white), but you can customize this color to fit the style of the visualization. This parameter expects a color value (hdtype Clr).
+
+#### tooltip_text_family
+
+Defines the font family used for the text inside tooltips. The default is NULL, which means the default font will be used. You can specify a font family from the available fonts list to customize the appearance of the tooltips. This parameter expects a character value (hdtype Fnt).
+
+#### tooltip_text_size
+
+Sets the font size for the text inside tooltips. The default size is 14 points, but you can specify a size between 1 and 20 points to adjust the text size in the tooltips. This parameter expects a numeric value representing the font size (hdtype Num).
+
+#### x_max
+
+Sets the maximum value for the X-axis in a chart. It determines the upper limit of the X-axis, controlling the range of data displayed along this axis. The default value is NULL and expects a numeric value (hdtype Num).
+
+#### x_min 
+
+Sets the minimum value for the X-axis in a chart. It determines the lower limit of the X-axis, controlling the range of data displayed along this axis. The default value is NULL and expects a numeric value (hdtype Num).
+
+#### y_axis_align
+
+Specifies the alignment of the Y-axis labels in a chart. It can be set to "left", "right", or "center" relative to the axis. The default value is NULL, which means that the alignment is determined automatically and expects a character values (hdtype Cat).
+
+#### y_max
+
+Set the maximum value represented on the Y-axis of a chart. This parameter allows you to focus the visualization on a specific range of interest by defining the upper limit of the Y-axis. The default value is NULL and it expects a numerical value (hdtype Num).
+
+#### y_min 
+
+Sets the minimum value for the Y-axis in a chart. It determines the lower limit of the Y-axis, controlling the range of data displayed along this axis. The default value is NULL and it expects a numeric value (hdtype Num).

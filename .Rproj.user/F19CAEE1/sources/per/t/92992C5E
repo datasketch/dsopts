@@ -3,24 +3,24 @@
     "path": "~/Nicolas_Datasktch/dsopts/vignettes/titles_options.Rmd",
     "project_path": "vignettes/titles_options.Rmd",
     "type": "r_markdown",
-    "hash": "3125262078",
+    "hash": "4090956023",
     "contents": "",
-    "dirty": false,
+    "dirty": true,
     "created": 1708534497775.0,
     "source_on_save": true,
-    "relative_order": 5,
+    "relative_order": 6,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "55,61",
-        "scrollLine": "49"
+        "cursorPosition": "127,151",
+        "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1708534683,
+    "lastKnownWriteTime": 1708545469,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1708534683261,
+    "last_content_update": 1708545592449,
     "read_only": false,
     "read_only_alternatives": []
 }
