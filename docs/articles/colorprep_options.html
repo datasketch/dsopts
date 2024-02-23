@@ -135,6 +135,15 @@ value
 <code>list(#385573, #ffa92a, #f06142, #99e8b3, #32a8ce, #996295, #e59fd7)</code>.</p>
 </div>
 <div class="section level4">
+<h4 id="color_palette_divergening">color_palette_divergening<a class="anchor" aria-label="anchor" href="#color_palette_divergening"></a>
+</h4>
+<p>Specifies the color palette used to represent diverging data, where
+colors represent two opposite extremes or value ranges, such as
+hot/cold, high/low, etc. The argument expects a list of colors (hdtype
+Lst[Clr]) in any valid format. By default, it is set to list(#ff844e,
+#ffa154, #ffc48b, #eef0f1, #a0c7da, #57a0c5, #255b89).</p>
+</div>
+<div class="section level4">
 <h4 id="color_palette_sequential">color_palette_sequential<a class="anchor" aria-label="anchor" href="#color_palette_sequential"></a>
 </h4>
 <p>Specifies the color palette used for sequential data, where every
@@ -149,6 +158,22 @@ valid format, its default value is
 <p>Specifies the type of color palette to be used in the visualization.
 It defaults to NULL and its possible values include “categorical,”
 “sequential,” and “diverging” (hdtype Cat).</p>
+</div>
+<div class="section level4">
+<h4 id="highlight_values_color">highlight_values_color<a class="anchor" aria-label="anchor" href="#highlight_values_color"></a>
+</h4>
+<p>Specifies the color used to highlight specific values or elements in
+the visualization. The default color is #50c5b7, and it expects a value
+of type character (hdtype Clr), which can be specified in any valid
+color format.</p>
+</div>
+<div class="section level4">
+<h4 id="na_color">na_color<a class="anchor" aria-label="anchor" href="#na_color"></a>
+</h4>
+<p>Specifies the color used to represent missing or “NA” (Not Available)
+data. The default color is #cbcdcf, and it expects a value of type
+character (hdtype Clr), which can be specified in any valid color
+format.</p>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>
